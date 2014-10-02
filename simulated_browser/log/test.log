@@ -1,0 +1,1836 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 00:17:13.099679"], ["name", "Comedy"], ["updated_at", "2014-09-30 00:17:13.099679"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-29 20:17:13 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-29 20:17:13 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 00:17:13.202077"], ["updated_at", "2014-09-30 00:17:13.202077"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 00:17:13.232315"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 00:17:13.234409"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 00:17:13.237760"], ["updated_at", "2014-09-30 00:17:13.237760"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 00:17:13.239017"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 00:17:13.239725"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 00:30:34.044545"], ["name", "Comedy"], ["updated_at", "2014-09-30 00:30:34.044545"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-29 20:30:34 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-29 20:30:34 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 00:30:34.071358"], ["updated_at", "2014-09-30 00:30:34.071358"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 00:30:34.073316"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 00:30:34.074904"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 00:30:34.077967"], ["updated_at", "2014-09-30 00:30:34.077967"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 00:30:34.079296"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 00:30:34.080279"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 00:31:10.134371"], ["name", "Comedy"], ["updated_at", "2014-09-30 00:31:10.134371"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-29 20:31:10 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-29 20:31:10 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 00:31:10.162304"], ["updated_at", "2014-09-30 00:31:10.162304"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 00:31:10.164318"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 00:31:10.165943"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 00:31:10.169148"], ["updated_at", "2014-09-30 00:31:10.169148"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 00:31:10.170888"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 00:31:10.171755"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 00:31:48.622003"], ["name", "Comedy"], ["updated_at", "2014-09-30 00:31:48.622003"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-29 20:31:48 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-29 20:31:48 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-29 20:31:48 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 00:31:48.679260"], ["updated_at", "2014-09-30 00:31:48.679260"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 00:31:48.681314"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 00:31:48.682718"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 00:31:48.685659"], ["updated_at", "2014-09-30 00:31:48.685659"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 00:31:48.687436"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 00:31:48.688671"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (17.8ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 18:48:55.151078"], ["name", "Comedy"], ["updated_at", "2014-09-30 18:48:55.151078"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 14:48:55 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 14:48:55 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 14:48:55 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 18:48:55.314347"], ["updated_at", "2014-09-30 18:48:55.314347"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 18:48:55.330695"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 18:48:55.332521"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 18:48:55.336650"], ["updated_at", "2014-09-30 18:48:55.336650"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 18:48:55.338371"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 18:48:55.339463"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 18:53:57.340157"], ["name", "Comedy"], ["updated_at", "2014-09-30 18:53:57.340157"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 14:53:57 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 14:53:57 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 14:53:57 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 18:53:57.371931"], ["updated_at", "2014-09-30 18:53:57.371931"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 18:53:57.373859"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 18:53:57.375216"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 18:53:57.379026"], ["updated_at", "2014-09-30 18:53:57.379026"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 18:53:57.380422"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 18:53:57.381263"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 18:58:08.694363"], ["name", "Comedy"], ["updated_at", "2014-09-30 18:58:08.694363"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 14:58:08 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 14:58:08 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 14:58:08 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 18:58:08.724889"], ["updated_at", "2014-09-30 18:58:08.724889"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 18:58:08.726839"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 18:58:08.728391"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 18:58:08.732063"], ["updated_at", "2014-09-30 18:58:08.732063"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 18:58:08.733556"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 18:58:08.734262"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:01:58.097874"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:01:58.097874"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:01:58 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:01:58 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:01:58 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:01:58.128181"], ["updated_at", "2014-09-30 19:01:58.128181"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:01:58.130112"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:01:58.131622"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:01:58.135433"], ["updated_at", "2014-09-30 19:01:58.135433"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:01:58.136893"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:01:58.137696"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:02:12.352852"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:02:12.352852"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:02:12 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:02:12 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:02:12 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:02:12.381558"], ["updated_at", "2014-09-30 19:02:12.381558"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:02:12 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:02:12 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:02:12 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 99ms (Views: 98.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:02:12.493488"], ["updated_at", "2014-09-30 19:02:12.493488"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:02:12.495169"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:02:12.496527"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:02:12.499312"], ["updated_at", "2014-09-30 19:02:12.499312"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:02:12.500458"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:02:12.501089"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:03:42.879544"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:03:42.879544"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:03:42 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:03:42 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:03:42 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:03:42.909243"], ["updated_at", "2014-09-30 19:03:42.909243"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:03:42 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:03:42 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:03:42 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:03:42.935369"], ["updated_at", "2014-09-30 19:03:42.935369"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:03:42.937152"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:03:42.938614"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:03:42.941467"], ["updated_at", "2014-09-30 19:03:42.941467"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:03:42.942656"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:03:42.943332"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:08:47.378559"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:08:47.378559"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:08:47 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:08:47 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:08:47 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:08:47.407922"], ["updated_at", "2014-09-30 19:08:47.407922"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:08:47 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:08:47 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:08:47 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:08:47.433926"], ["updated_at", "2014-09-30 19:08:47.433926"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:08:47.435711"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:08:47.437156"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:08:47.440015"], ["updated_at", "2014-09-30 19:08:47.440015"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:08:47.441244"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:08:47.441940"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:13:00.169570"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:13:00.169570"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:13:00 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:13:00 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:13:00 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:13:00.199780"], ["updated_at", "2014-09-30 19:13:00.199780"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:13:00 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:13:00 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:13:00 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.1ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:13:00.225470"], ["updated_at", "2014-09-30 19:13:00.225470"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:13:00.227166"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:13:00.228582"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:13:00.231360"], ["updated_at", "2014-09-30 19:13:00.231360"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:13:00.232499"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:13:00.233129"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:13:32.563095"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:13:32.563095"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:13:32 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:13:32 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:13:32 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:13:32.592025"], ["updated_at", "2014-09-30 19:13:32.592025"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:13:32 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:13:32 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:13:32 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:13:32.616812"], ["updated_at", "2014-09-30 19:13:32.616812"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:13:32.618555"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:13:32.619887"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:13:32.622659"], ["updated_at", "2014-09-30 19:13:32.622659"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:13:32.623981"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:13:32.624623"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:26:43.438813"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:26:43.438813"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:26:43 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:26:43 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:26:43 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:26:43.467785"], ["updated_at", "2014-09-30 19:26:43.467785"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:26:43 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:26:43 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:26:43 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:26:43.493610"], ["updated_at", "2014-09-30 19:26:43.493610"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:26:43.495488"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:26:43.497014"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:26:43.499832"], ["updated_at", "2014-09-30 19:26:43.499832"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:26:43.501001"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:26:43.501675"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:28:15.591427"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:28:15.591427"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:28:15 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:28:15 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:28:15 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:28:15.620179"], ["updated_at", "2014-09-30 19:28:15.620179"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:28:15 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:28:15 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:28:15 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.1ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:28:15.646008"], ["updated_at", "2014-09-30 19:28:15.646008"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:28:15.647757"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:28:15.649108"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:28:15.651877"], ["updated_at", "2014-09-30 19:28:15.651877"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:28:15.653041"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:28:15.653729"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:28:32.899041"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:28:32.899041"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:28:32 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:28:32 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:28:32 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:28:32.927801"], ["updated_at", "2014-09-30 19:28:32.927801"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:28:32 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:28:32 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:28:32 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.1ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:28:32.952905"], ["updated_at", "2014-09-30 19:28:32.952905"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:28:32.954781"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:28:32.956145"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:28:32.958909"], ["updated_at", "2014-09-30 19:28:32.958909"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:28:32.960067"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:28:32.960725"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:31:32.267959"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:31:32.267959"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:31:32 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:31:32 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:31:32 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:31:32.296972"], ["updated_at", "2014-09-30 19:31:32.296972"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:31:32 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:31:32 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:31:32 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:31:32.322026"], ["updated_at", "2014-09-30 19:31:32.322026"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:31:32.323766"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:31:32.325270"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:31:32.328068"], ["updated_at", "2014-09-30 19:31:32.328068"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:31:32.329294"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:31:32.329969"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:31:52.855103"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:31:52.855103"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:31:52 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:31:52 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:31:52 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:31:52.884555"], ["updated_at", "2014-09-30 19:31:52.884555"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:31:52 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:31:52 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:31:52 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:31:52.910988"], ["updated_at", "2014-09-30 19:31:52.910988"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:31:52.912861"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:31:52.914332"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:31:52.917019"], ["updated_at", "2014-09-30 19:31:52.917019"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:31:52.918231"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:31:52.918879"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:32:34.506364"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:32:34.506364"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:32:34 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:32:34 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:32:34 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:32:34.535202"], ["updated_at", "2014-09-30 19:32:34.535202"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:32:34 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:32:34 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:32:34 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:32:34.560723"], ["updated_at", "2014-09-30 19:32:34.560723"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:32:34.562439"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:32:34.563791"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:32:34.566542"], ["updated_at", "2014-09-30 19:32:34.566542"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:32:34.567745"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:32:34.568389"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:35:34.202334"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:35:34.202334"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:35:34 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:35:34 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:35:34 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:35:34.231261"], ["updated_at", "2014-09-30 19:35:34.231261"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:35:34 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:35:34 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:35:34 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:35:34.256589"], ["updated_at", "2014-09-30 19:35:34.256589"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:35:34.258339"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:35:34.259938"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:35:34.262748"], ["updated_at", "2014-09-30 19:35:34.262748"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:35:34.263908"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:35:34.264561"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:37:59.773269"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:37:59.773269"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:37:59 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:37:59 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:37:59 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:37:59.802481"], ["updated_at", "2014-09-30 19:37:59.802481"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:37:59 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:37:59 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:37:59 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:37:59.827881"], ["updated_at", "2014-09-30 19:37:59.827881"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:37:59.829638"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:37:59.830978"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:37:59.833755"], ["updated_at", "2014-09-30 19:37:59.833755"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:37:59.834899"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:37:59.835541"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:38:13.578522"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:38:13.578522"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:38:13 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:38:13 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:38:13 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:38:13.608280"], ["updated_at", "2014-09-30 19:38:13.608280"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:38:13 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:38:13 -0400
+Processing by GenresController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:38:13 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGenre Load (0.0ms)[0m  SELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:38:13.635117"], ["updated_at", "2014-09-30 19:38:13.635117"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:38:13.636954"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:38:13.638423"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:38:13.641317"], ["updated_at", "2014-09-30 19:38:13.641317"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:38:13.642534"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:38:13.643256"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 19:46:26.892316"], ["name", "Comedy"], ["updated_at", "2014-09-30 19:46:26.892316"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:46:26 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 15:46:26 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 15:46:26 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+Unpermitted parameters: title, release_year
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:46:26.920587"], ["updated_at", "2014-09-30 19:46:26.920587"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 15:46:26 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 15:46:26 -0400
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 15:46:26 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 19:46:26.947555"], ["updated_at", "2014-09-30 19:46:26.947555"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:46:26.949330"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 19:46:26.950681"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 19:46:26.953447"], ["updated_at", "2014-09-30 19:46:26.953447"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 19:46:26.954614"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 19:46:26.955260"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-09-30 20:29:04.913026"], ["name", "Comedy"], ["updated_at", "2014-09-30 20:29:04.913026"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 16:29:04 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-09-30 16:29:04 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-09-30 16:29:04 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+Unpermitted parameters: title, release_year
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "release_year", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-09-30 20:29:04.968796"], ["release_year", 1980], ["title", "Caddyshack"], ["updated_at", "2014-09-30 20:29:04.968796"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "genres_movies" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-09-30 20:29:04.969963"], ["genre_id", 1], ["movie_id", 1], ["updated_at", "2014-09-30 20:29:04.969963"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 30ms (ActiveRecord: 0.7ms)
+Started GET "/movies" for 127.0.0.1 at 2014-09-30 16:29:04 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-09-30 16:29:04 -0400
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-09-30 16:29:04 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.0ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-09-30 20:29:04.997611"], ["updated_at", "2014-09-30 20:29:04.997611"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 20:29:04.999887"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-09-30 20:29:05.001574"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-30 20:29:05.004614"], ["updated_at", "2014-09-30 20:29:05.004614"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-09-30 20:29:05.005925"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-09-30 20:29:05.006614"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (25.4ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-10-02 14:24:22.521384"], ["name", "Comedy"], ["updated_at", "2014-10-02 14:24:22.521384"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 10:24:22 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 17ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-02 10:24:22 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-10-02 10:24:22 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+Unpermitted parameters: title, release_year
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "release_year", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-10-02 14:24:22.762963"], ["release_year", 1980], ["title", "Caddyshack"], ["updated_at", "2014-10-02 14:24:22.762963"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "genres_movies" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-10-02 14:24:22.763983"], ["genre_id", 1], ["movie_id", 1], ["updated_at", "2014-10-02 14:24:22.763983"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 51ms (ActiveRecord: 0.7ms)
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 10:24:22 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-10-02 10:24:22 -0400
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-10-02 10:24:22 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.0ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-10-02 14:24:22.809532"], ["updated_at", "2014-10-02 14:24:22.809532"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 14:24:22.811293"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-10-02 14:24:22.832106"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-10-02 14:24:22.835766"], ["updated_at", "2014-10-02 14:24:22.835766"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 14:24:22.837057"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-10-02 14:24:22.837741"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-10-02 14:26:50.346306"], ["name", "Comedy"], ["updated_at", "2014-10-02 14:26:50.346306"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 10:26:50 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-02 10:26:50 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-10-02 10:26:50 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+Unpermitted parameters: title, release_year
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "release_year", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-10-02 14:26:50.385014"], ["release_year", 1980], ["title", "Caddyshack"], ["updated_at", "2014-10-02 14:26:50.385014"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "genres_movies" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-10-02 14:26:50.385929"], ["genre_id", 1], ["movie_id", 1], ["updated_at", "2014-10-02 14:26:50.385929"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 13ms (ActiveRecord: 0.6ms)
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 10:26:50 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-10-02 10:26:50 -0400
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-10-02 10:26:50 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.0ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-10-02 14:26:50.406706"], ["updated_at", "2014-10-02 14:26:50.406706"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 14:26:50.408491"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-10-02 14:26:50.409903"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-10-02 14:26:50.412722"], ["updated_at", "2014-10-02 14:26:50.412722"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 14:26:50.413909"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-10-02 14:26:50.414554"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-10-02 14:27:17.738410"], ["name", "Comedy"], ["updated_at", "2014-10-02 14:27:17.738410"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 10:27:17 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-02 10:27:17 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-10-02 10:27:17 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+Unpermitted parameters: title, release_year
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "release_year", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-10-02 14:27:17.775995"], ["release_year", 1980], ["title", "Caddyshack"], ["updated_at", "2014-10-02 14:27:17.775995"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "genres_movies" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-10-02 14:27:17.776950"], ["genre_id", 1], ["movie_id", 1], ["updated_at", "2014-10-02 14:27:17.776950"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 13ms (ActiveRecord: 0.6ms)
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 10:27:17 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-10-02 10:27:17 -0400
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-10-02 10:27:17 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.0ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-10-02 14:27:17.796943"], ["updated_at", "2014-10-02 14:27:17.796943"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 14:27:17.798761"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-10-02 14:27:17.800195"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-10-02 14:27:17.803005"], ["updated_at", "2014-10-02 14:27:17.803005"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 14:27:17.804180"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-10-02 14:27:17.804850"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-10-02 18:34:13.849269"], ["name", "Comedy"], ["updated_at", "2014-10-02 18:34:13.849269"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 14:34:13 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-02 14:34:13 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+Started POST "/movies" for 127.0.0.1 at 2014-10-02 14:34:13 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+Unpermitted parameters: title, release_year
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "release_year", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-10-02 18:34:13.920495"], ["release_year", 1980], ["title", "Caddyshack"], ["updated_at", "2014-10-02 18:34:13.920495"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "genres_movies" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-10-02 18:34:13.921823"], ["genre_id", 1], ["movie_id", 1], ["updated_at", "2014-10-02 18:34:13.921823"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 29ms (ActiveRecord: 0.7ms)
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 14:34:13 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-10-02 14:34:13 -0400
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-10-02 14:34:13 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.0ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-10-02 18:34:13.958537"], ["updated_at", "2014-10-02 18:34:13.958537"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 18:34:13.960447"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-10-02 18:34:13.961953"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-10-02 18:34:13.964757"], ["updated_at", "2014-10-02 18:34:13.964757"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 18:34:13.966066"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-10-02 18:34:13.966717"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "genres" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-10-02 19:12:07.344550"], ["name", "Comedy"], ["updated_at", "2014-10-02 19:12:07.344550"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 15:12:07 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-02 15:12:07 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/new.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.3ms)
+Started POST "/movies" for 127.0.0.1 at 2014-10-02 15:12:07 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Caddyshack", "release_year"=>"1980"}, "genres"=>["1"], "commit"=>"Save"}
+Unpermitted parameters: title, release_year
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "release_year", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-10-02 19:12:07.423583"], ["release_year", 1980], ["title", "Caddyshack"], ["updated_at", "2014-10-02 19:12:07.423583"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "genres_movies" ("created_at", "genre_id", "movie_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-10-02 19:12:07.424532"], ["genre_id", 1], ["movie_id", 1], ["updated_at", "2014-10-02 19:12:07.424532"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies
+Completed 302 Found in 16ms (ActiveRecord: 0.7ms)
+Started GET "/movies" for 127.0.0.1 at 2014-10-02 15:12:07 -0400
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started GET "/genres" for 127.0.0.1 at 2014-10-02 15:12:07 -0400
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+Started GET "/genres/1" for 127.0.0.1 at 2014-10-02 15:12:07 -0400
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.0ms)[0m  [1mSELECT  "genres".* FROM "genres"  WHERE "genres"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?  [["genre_id", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" INNER JOIN "genres_movies" ON "movies"."id" = "genres_movies"."movie_id" WHERE "genres_movies"."genre_id" = ?[0m  [["genre_id", 1]]
+  Rendered genres/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-10-02 19:12:07.447803"], ["updated_at", "2014-10-02 19:12:07.447803"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 19:12:07.449771"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_time", "2000-01-01 14:15:00.000000"], ["updated_at", "2014-10-02 19:12:07.451399"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-10-02 19:12:07.454433"], ["updated_at", "2014-10-02 19:12:07.454433"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "movies" SET "showtime_date" = ?, "updated_at" = ? WHERE "movies"."id" = 1[0m  [["showtime_date", "2007-10-10"], ["updated_at", "2014-10-02 19:12:07.455859"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "movies" SET "showtime_time" = ?, "updated_at" = ? WHERE "movies"."id" = 1  [["showtime_time", "2000-01-01 14:00:00.000000"], ["updated_at", "2014-10-02 19:12:07.456786"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction

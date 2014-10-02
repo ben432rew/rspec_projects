@@ -1,0 +1,33 @@
+  [1m[36m (150.6ms)[0m  [1mCREATE TABLE "genres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (144.5ms)[0m  CREATE TABLE "genres_movies" ("genre_id" integer, "movie_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (155.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "showtime_date" date, "showtime_time" time, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "release_year" integer) [0m
+  [1m[35m (137.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (144.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (133.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101015174811')
+  [1m[36m (133.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101015172916')[0m
+  [1m[35m (133.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101015164130')
+  [1m[36m (157.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101015161411')[0m
+  [1m[36m (141.5ms)[0m  [1mCREATE TABLE "genres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (133.4ms)[0m  CREATE TABLE "genres_movies" ("genre_id" integer, "movie_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (133.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "showtime_date" date, "showtime_time" time, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "release_year" integer) [0m
+  [1m[35m (359.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (155.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (155.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101015174811')
+  [1m[36m (167.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101015172916')[0m
+  [1m[35m (177.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101015164130')
+  [1m[36m (144.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101015161411')[0m
+  [1m[36m (248.1ms)[0m  [1mCREATE TABLE "genres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (177.6ms)[0m  CREATE TABLE "genres_movies" ("genre_id" integer, "movie_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (132.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "showtime_date" date, "showtime_time" time, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "release_year" integer) [0m
+  [1m[35m (157.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (133.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (135.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101015174811')
+  [1m[36m (133.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101015172916')[0m
+  [1m[35m (145.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101015164130')
+  [1m[36m (134.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101015161411')[0m
